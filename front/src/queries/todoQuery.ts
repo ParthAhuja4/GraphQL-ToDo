@@ -16,7 +16,7 @@ export const GET_TODOS = gql`
 export const CREATE_TODO = gql`
   #graphql
 
-  mutation CREATE_TODO($todo: String!) {
+  mutation CREATE_TODO($todo: String!) { 
     createTodo(todo: $todo) {
       id
       completed
@@ -25,6 +25,19 @@ export const CREATE_TODO = gql`
     }
   }
 `;
+
+// export const CREATE_TODO = gql`
+//   #graphql
+
+//   mutation CREATE_TODO($todo: String!) { *layer*
+//     createTodo(todo: $todo) { * actual resolver fn*
+//       id
+//       completed
+//       todo
+//       created_at
+//     }
+//   }
+// `;
 
 export const TOGGLE_TODO = gql`
   #graphql
